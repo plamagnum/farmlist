@@ -1,0 +1,11 @@
+extends layout
+
+block content
+   h1.
+      Farm List
+   ul
+      each user, i in userlist
+         li 
+           a(href="#{user.link}")= user.name
+
+           a(href="#{user._id}") Delete 

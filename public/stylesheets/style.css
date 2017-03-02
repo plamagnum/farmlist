@@ -1,0 +1,30 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-image: url(../images/headerBar.png);
+  background-repeat: repeat-x;
+}
+
+a {
+  /*color: #00B7FF;*/
+  color: #99c01a;
+}
+
+li {
+   list-style: none;
+}
+
+h1 {
+   color: #99c01b;
+}
+
+button {
+   /*float: right;*/
+   background: #99c525;
+   width: 55px;
+   height: 25px;
+   padding: 0px;
+   margin: 0px 0px 0px 15px;
+   /*position: relative;*/
+   /*overflow: visible;*/
+}
