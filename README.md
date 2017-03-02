@@ -1,0 +1,2 @@
+# farmlist
+RUN npm start
