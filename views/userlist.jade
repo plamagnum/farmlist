@@ -6,6 +6,8 @@ block content
    ul
       each user, i in userlist
          li 
-           a(href="#{user.link}")= user.name
-
-           a(href="#{user._id}") Delete 
+           a(href="#{user.link}" target="_blank")= user.name
+           a(href="#{user.link}" target="_blank")= user.xy
+           a(class="href" href="/userdel/#{user._id}") Delete
+   br
+   a(href="/") Home

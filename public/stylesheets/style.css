@@ -8,6 +8,12 @@ body {
 a {
   /*color: #00B7FF;*/
   color: #99c01a;
+  margin: 5px;
+  text-decoration: none;
+}
+
+a.href {
+   color: #FF0000;
 }
 
 li {
@@ -24,7 +30,9 @@ button {
    width: 55px;
    height: 25px;
    padding: 0px;
-   margin: 0px 0px 0px 15px;
+   margin: 0px 0px 0px 0px;
+   border-radius: 6px;
+   color: #fff;
    /*position: relative;*/
    /*overflow: visible;*/
 }

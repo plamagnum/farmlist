@@ -3,7 +3,7 @@ var router = express.Router();
 
 /*GET home page.*/ 
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+  res.render('index', { title: 'FarmList' });
 });
 
 router.get('/userlist', function(req, res){
@@ -24,14 +24,16 @@ router.get('/addlink', function(req, res, next){
 router.post('/addfarm', function(req, res){
    var db = req.db;
 
-   var userName = req.body.link;
-   var userEmail = req.body.name;
+   var userLink = req.body.link;
+   var xy = req.body.xy;
+   var userName = req.body.name;
 
    var collection = db.get('usercollection');
 
    collection.insert({
-      "link" : userName,
-      "name" : userEmail
+      "link" : userLink,
+      "xy" : xy,
+      "name" : userName
    }, function (err, doc) {
       if (err) {
          res.send("Problems");
@@ -42,9 +44,9 @@ router.post('/addfarm', function(req, res){
    });      
 });
 
-router.get('/:_id', function(req, res){
+router.get('/userdel/:id', function(req, res){
    var db = req.db;
-   var collection = db.get('usercollections');
+   var collection = db.get('usercollection');
    var userToDelete = req.params.id;
    collection.remove({'_id': userToDelete}, function(err){
       res.send((err === null) ? {msg: ''} : {msg:'error' + err});

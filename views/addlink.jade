@@ -1,8 +1,15 @@
 extends layout
 
+
 block content
    h1= title
    form#formAddUser(name="addfarm", method="post", action="/addfarm")
-      input#inputUserName(type="text", placeholder="link", name="link")
-      input#inputUserEmail(type="text", placeholder="name", name="name")
+      input#inputUserLink(type="text", placeholder="link", name="link")
+      br
+      input#inputUserName(type="text", placeholder="x/y", name="xy")
+      br
+      input#inputUserName(type="text", placeholder="name", name="name")
+      br
       button#btnSubmit(type="submit") submit
+   br   
+   a(href="/") Home
