@@ -6,13 +6,13 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'FarmList' });
 });
 
-router.get('/userlist', function(req, res){
+router.get('/farmlist', function(req, res){
    var db = req.db;
    var collection = db.get('usercollection');
    collection.find({},{},function(e,docs){
-      res.render('userlist',{
-         title: 'User list',
-         "userlist" : docs
+      res.render('farmlist',{
+         title: 'Farm list',
+         "farmlist" : docs
       });   
    });
 });
