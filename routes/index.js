@@ -39,7 +39,7 @@ router.post('/addfarm', function(req, res){
          res.send("Problems");
       }
       else {
-      res.redirect("userlist");
+      res.redirect("farmlist");
       }
    });      
 });
@@ -51,7 +51,7 @@ router.get('/userdel/:id', function(req, res){
    collection.remove({'_id': userToDelete}, function(err){
       res.send((err === null) ? {msg: ''} : {msg:'error' + err});
    });
-   res.redirect('/userlist');   
+   res.redirect('/farmlist');   
 });
 
 module.exports = router;
